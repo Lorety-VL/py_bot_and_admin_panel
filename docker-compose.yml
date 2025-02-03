@@ -40,6 +40,7 @@ services:
     volumes:
       - ./staticfiles:/app/staticfiles
       - ./media:/app/media
+      - ./certificates:/etc/letsencrypt/live/${DOMAIN_URL}
     depends_on:
       - django
     networks:
