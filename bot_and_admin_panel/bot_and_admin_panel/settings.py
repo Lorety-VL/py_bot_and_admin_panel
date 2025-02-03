@@ -32,6 +32,7 @@ ALLOWED_HOSTS = [DOMAIN_URL]
 
 CSRF_TRUSTED_ORIGINS = [f'https://{DOMAIN_URL}']
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Application definition
 
