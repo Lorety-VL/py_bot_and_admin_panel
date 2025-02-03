@@ -46,6 +46,14 @@ server {
     location / {
         return 301 https://\$host\$request_uri;
     }
+
+    location /static/ {
+        alias /app/staticfiles/;
+    }
+
+    location /media/ {
+        alias /app/media/;
+    }
 }
 EOF
 
