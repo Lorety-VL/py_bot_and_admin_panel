@@ -26,7 +26,11 @@ SECRET_KEY = os.environ['DJANGO_SECRET']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [os.environ['DOMAIN_URL']]
+DOMAIN_URL = os.environ['DOMAIN_URL']
+
+ALLOWED_HOSTS = [DOMAIN_URL]
+
+CSRF_TRUSTED_ORIGINS = [f'https://{DOMAIN_URL}']
 
 
 # Application definition

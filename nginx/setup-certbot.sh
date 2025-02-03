@@ -33,6 +33,14 @@ server {
         proxy_set_header X-Real-IP \$remote_addr;
         proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
     }
+
+    location /static/ {
+        alias /app/staticfiles/;
+    }
+
+    location /media/ {
+        alias /app/media/;
+    }
 }
 
 server {
@@ -45,14 +53,6 @@ server {
 
     location / {
         return 301 https://\$host\$request_uri;
-    }
-
-    location /static/ {
-        alias /app/staticfiles/;
-    }
-
-    location /media/ {
-        alias /app/media/;
     }
 }
 EOF
