@@ -14,3 +14,4 @@ migrate:
 	docker compose exec django uv run python manage.py migrate
 add_admin:
 	docker compose exec django uv run python manage.py createsuperuser
+all: build start collectstatic start_bot
