@@ -13,7 +13,7 @@ DOMAIN_URL
 DOMAIN_EMAIL
 ```
 
-## Запуск бота и админки
+## Запуск админки
 
 ```sh
 make build
@@ -32,6 +32,12 @@ make add_admin
 
 ```sh
 make set_certificate
+```
+
+## Запуск бота
+
+```sh
+make start_bot
 ```
 
 
